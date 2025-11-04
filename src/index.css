@@ -1,0 +1,27 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+  display: none;
+}
+
+input[type="password"]::-webkit-textfield-decoration-container {
+  display: none;
+}
+
+input[type="password"]::-webkit-credentials-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+.weak { background-color: #f87171; }      /* red-400 */
+.good { background-color: #fb923c; }      /* orange-400 */
+.medium { background-color: #facc15; }    /* yellow-400 */
+.verygood { background-color: #4ade80; }  /* green-400 */
+.strong { background-color: #16a34a; }    /* green-600 */
+
