@@ -15,6 +15,14 @@ import WelcomBack from './Login/WelcomBack';
 import ForgotPassword from './Forgot password/ForgotPassword';
 import ResetPassword from './Forgot password/ResetPassword';
 import PasswordResetSuccess from './Forgot password/PasswordResetSuccess';
+import IntrotoKYC from './KYCFlow/intotoKYC';
+import SelectID from './KYCFlow/selectID';
+import ProgressStepper from './components/ProgressBar';
+import Step1 from './KYCFlow/step1';
+import Step2 from './KYCFlow/step2';
+import Step3 from './KYCFlow/step3';
+import CompletedKYC from './KYCFlow/completed';
+
 
 function App() {
   return (
@@ -24,21 +32,16 @@ function App() {
      
      
        <AboutScreen1/>
-       <Welcome/>
-       <AccountInputToggle/> 
-
-      <Verification/>
-      <CreatePassword/>
-      <TermsConditions/>
-      <Terms/>
-      <Privacy/>
-      <YourIn/>
-      <LoginScreen/>
-      <SwitchAccount/>
-      <WelcomBack/>
-      <ForgotPassword/>
-      <ResetPassword/>
+  
       <PasswordResetSuccess/>
+      <IntrotoKYC/>
+      <SelectID/>
+      <Step3/>
+      <CompletedKYC/>
+     
+
+    
+     
 
 
       
