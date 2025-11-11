@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import SkipButton from "../components/PreviousButton";
+import HeaderSignup from "../components/headerSignup";
 
 
 const Button = ({ label, disabled }) => (
@@ -6,7 +8,7 @@ const Button = ({ label, disabled }) => (
         className={`w-full py-3 font-semibold rounded-lg transition-colors ${
             disabled 
                 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
-                : 'bg-black text-white hover:bg-gray-800'
+                : 'bg-[#F0BE1F] text-black hover:bg-yellow-300'
         }`}
         disabled={disabled}
     >
@@ -58,15 +60,15 @@ const Verification = () => {
 
 
     return (
-        <div className="mx-auto w-full max-w-md p-6 bg-white shadow-2xl rounded-2xl my-[50px]"> 
+      <div className='bg-[#110070] p-4 pb-8'>  
+      <HeaderSignup/>  
+        <div className="mx-auto w-full max-w-md p-6 bg-white shadow-2xl border-[1px] border-[#2000D4] rounded-2xl my-[50px] bg-[#110070] h-[542px] "> 
             <div className="flex items-center space-x-2 mb-6">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-gray-700 cursor-pointer">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-                </svg>
+              <SkipButton/>
             </div>
 
-            <h1 className="text-xl font-bold mb-2 text-gray-800">Verify your Identity</h1>
-            <p className="text-sm text-gray-500 mb-8">Enter the 6-digit code sent to +234 *** 6789</p>
+            <h1 className="text-xl font-bold mb-2 text-white text-center">Verify your Identity</h1>
+            <p className="text-sm text-gray-400 mb-8 text-center">Enter the 6-digit code sent to +234 *** 6789</p>
             
             
             <div className="flex justify-between space-x-2">
@@ -78,18 +80,18 @@ const Verification = () => {
                         maxLength="1" 
                         value={digit}
                         onChange={(e) => handleChange(e, index)}
-                        className="w-10 h-14 text-center text-xl font-bold rounded-lg border-2 border-gray-300 focus:border-black focus:ring-0 transition-colors"
+                        className="w-10 h-14 text-center text-xl font-medium rounded-lg border-2 border-gray-400 focus:border-white focus:ring-0 transition-colors bg-[#110070] caret-white text-white"
                         style={{ outline: 'none' }} 
                     />
                 ))}
             </div>
 
-            <p className="text-sm text-gray-500 mt-8 text-center">
+            <p className="text-sm text-gray-300 mt-8 text-center">
                 Didn't receive the code? 
                 <button 
                     onClick={() => { if (canResend) setSeconds(30); }}
-                    className={`ml-1 font-bold transition-colors ${
-                        canResend ? 'text-blue-600 hover:text-blue-700' : 'text-gray-400 cursor-default'
+                    className={`ml-1 font-medium transition-colors ${
+                        canResend ? 'text-[#F0BE1F] hover:text-blue-700' : 'text-gray-400 cursor-default'
                     }`}
                     disabled={!canResend}
                 >
@@ -98,13 +100,14 @@ const Verification = () => {
             </p>
             
             
-            <div className="w-full mt-[300px]">
+            <div className="w-full mt-[180px] ">
                 <Button 
                     label="Verify" 
                     disabled={!isCodeComplete} 
                 />
             </div>
             
+        </div>
         </div>
     );
 };

@@ -22,6 +22,7 @@ import Step1 from './KYCFlow/step1';
 import Step2 from './KYCFlow/step2';
 import Step3 from './KYCFlow/step3';
 import CompletedKYC from './KYCFlow/completed';
+import HeaderSignup from './components/headerSignup';
 
 
 function App() {
@@ -29,15 +30,15 @@ function App() {
    
     
     <div >
+      <AccountInputToggle/>
+      <Verification/>
+      <CreatePassword/>
+      <TermsConditions/>
+      <YourIn/>
+      
      
      
-       <AboutScreen1/>
-  
-      <PasswordResetSuccess/>
-      <IntrotoKYC/>
-      <SelectID/>
-      <Step3/>
-      <CompletedKYC/>
+ 
      
 
     
