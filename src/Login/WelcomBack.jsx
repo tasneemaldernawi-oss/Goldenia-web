@@ -1,25 +1,30 @@
 import React from "react";
-import CircleImage from "../components/CircleImage";
+import Logo from '../assets/Logo.png';
 import TextBlock from '../components/textBlock';
 
 
 const WelcomBack=()=>{
+    
     return(
-        <div className="flex flex-col items-center justify-between min-h-screen gap-1 bg-white p-10">
+        <div className='bg-[#110070] min-h-screen p-6' >
+
+        <div className="mx-auto w-full max-w-md p-6 bg-[#110070] shadow-2xl rounded-2xl my-[50px] h-[540px] border-[1px] border-[#2000D4] mt-3">
             
             <div className='flex flex-col items-center gap-4 mt-[150px]'>
-               <CircleImage size={120}/>
+             <div >
+                <img src={Logo} alt="Logo" />
+            </div>
+
                <TextBlock heading="Welcome Back!" paragraph=""/>
-               <div className="h-10 w-10 bg-gray-200 ">
-
-
-               </div>
-               <p className="text-gray-400">Loading your assets</p>
 
             </div>
 
         </div>
+        </div>
+        
     );
+    
+  
     
 };
 

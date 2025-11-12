@@ -86,7 +86,7 @@ const AccountInputToggle = () => {
           <input
             type="email"
             placeholder="example@domain.com"
-            className="w-full p-3 text-sm bg-transparent focus:outline-none border-none bg-[#110070] "
+            className="w-full p-3 text-sm  focus:outline-none border-none bg-[#110070] "
           />
         )}
       </div>

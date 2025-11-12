@@ -1,4 +1,6 @@
 import React, { useRef, useState} from "react";
+import HeaderLogin from '../components/headerLogin';
+import SkipButton from "../components/PreviousButton";
 
 
 const LoginScreen=()=>{
@@ -20,18 +22,18 @@ const LoginScreen=()=>{
       };
     
       return (
+             <div className='bg-[#110070] p-4 '>  
+            <HeaderLogin/>  
         
-        <div className="mx-auto w-full max-w-md p-6 bg-white shadow-2xl rounded-2xl my-[50px]">
+        <div className="mx-auto w-full max-w-md p-6 bg-[#110070] shadow-2xl rounded-2xl my-[50px] border-[1px] border-[#2000D4]">
           
           <div className="flex items-center space-x-2 mb-6">
            
-            <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-gray-700 cursor-pointer">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-            </svg>
+            <SkipButton/>
            
           </div>
-           <h1 className="text-xl mb-4 font-bold text-gray-800">Welcome back to Goldenia</h1> 
-          <p className="text-sm text-gray-500 mb-6">Your gateway to a world of real value</p>
+           <h1 className="text-xl mb-3 font-bold text-white text-center">Welcome back to Goldenia</h1> 
+          <p className="text-sm text-gray-400 mb-6 text-center">Your gateway to a world of real value</p>
     
        
           <div className="flex -mx-4 border-b border-gray-200 mb-6">
@@ -42,8 +44,8 @@ const LoginScreen=()=>{
               className={`
                 cursor-pointer px-4 py-3 text-center text-sm transition-all duration-200 w-1/2
                 ${isPhoneActive 
-                  ? 'text-black-600 font-semibold border-b-2 border-black' 
-                  : 'text-gray-500 hover:text-gray-700' 
+                  ? 'text-[#F0BE1F] font-semibold border-b-[3px] border-[#F0BE1F]' 
+                  : 'text-gray-400 hover:text-gray-700' 
                 }
               `}
             >
@@ -56,8 +58,8 @@ const LoginScreen=()=>{
               className={`
                 cursor-pointer px-4 py-3 text-center text-sm transition-all duration-200 w-1/2
                 ${!isPhoneActive 
-                  ? 'text-black-600 font-semibold border-b-2 border-black' 
-                  : 'text-gray-500 hover:text-gray-700' 
+                  ? 'text-[#F0BE1F] font-semibold border-b-[3px] border-[#F0BE1F]' 
+                  : 'text-gray-400 hover:text-gray-700' 
                 }
               `}
             >
@@ -70,9 +72,9 @@ const LoginScreen=()=>{
             
             {isPhoneActive ? (
               
-              <div className="flex items-center w-full">
+              <div className="flex items-center w-full bg-[#110070]">
                 
-                <select className="p-3 bg-transparent text-sm focus:outline-none border-r border-gray-300">
+                <select className="p-3 bg-transparent text-sm focus:outline-none border-r border-gray-300 text-white bg-black">
                   <option value="+234">+234</option>
                   <option value="+1">+1</option>
                   <option value="+44">+44</option>
@@ -89,35 +91,35 @@ const LoginScreen=()=>{
               <input
                 type="email"
                 placeholder="example@domain.com"
-                className="w-full p-3 text-sm bg-transparent focus:outline-none border-none"
+                className="w-full p-3 text-sm  focus:outline-none border-none bg-[#110070]  "
               />
             )}
           </div>
 
           {/*password*/}
-        <div className="flex items-center w-full border border-gray-300  rounded-lg mt-3 bg-gray-50 transition-all duration-300">
+        <div className="flex items-center w-full border border-gray-300  rounded-lg mt-3 bg-[#110070] text-white transition-all duration-300">
         <input
           ref={passwordRef}
           type={showPassword ? "text" : "password"}
           placeholder="......."
-          className="flex-grow p-3 text-sm bg-transparent focus:outline-none border-none"
+          className="flex-grow p-3 text-sm bg-transparent focus:outline-none border-none "
         />
         <i
           onClick={togglePasswordVisibility}
-          className={`far cursor-pointer mr-[20px] ${showPassword ? "fa-eye-slash" : "fa-eye"}`}
+          className={`far cursor-pointer mr-[20px] text-white ${showPassword ? "fa-eye-slash" : "fa-eye"}`}
           id="togglePassword"
         ></i>
       </div>
       {/* Forgot password*/}
 
       <div >
-        <p className="float-right mt-2 mb-5 mr-1 text-sm"><strong>Forgot Password?</strong></p>
+        <p className="float-right mt-2 mb-5 mr-1 text-sm  text-[#F0BE1F]"><strong>Forgot Password?</strong></p>
 
       </div>
     
     
-          <button className="w-full mt-8 py-3 bg-gray-300 text-black font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors">
-              Log In
+          <button className="w-full mt-8 py-3 bg-[#F0BE1F] text-black font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors">
+              Continue
           </button>
     
          
@@ -134,10 +136,8 @@ const LoginScreen=()=>{
               Apple
           </button>
           
-      
-          <div className="mt-8 text-center text-sm">
-              Don't have an account? <a href="#" className="text-blue-600 font-semibold hover:underline">Create an Account</a>
-          </div>
+    
+        </div>
         </div>
       );
 };

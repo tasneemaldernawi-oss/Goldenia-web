@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import HeaderPassword from '../components/headerPassword';
+import SkipButton from "../components/PreviousButton";
 
 const ForgotPassword=()=>{
     
@@ -13,17 +15,16 @@ const ForgotPassword=()=>{
         setIsPhoneActive(false);
       };
     return(
-          <div className="mx-auto w-full max-w-md p-6 bg-white shadow-2xl rounded-2xl my-[50px]">
+       <div className='bg-[#110070] p-4 ' >
+       <HeaderPassword/> 
+        <div className="mx-auto w-full max-w-md p-6 bg-[#110070] shadow-2xl rounded-2xl my-[50px] border-[1px] border-[#2000D4] h-[580px]">
       
       <div className="flex items-center space-x-2 mb-6">
-       
-        <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="w-5 h-5 text-gray-700 cursor-pointer">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
-        </svg>
+        <SkipButton/>
        
       </div>
-       <h1 className="text-xl mb-4 font-bold text-gray-800">Reset your Password</h1> 
-      <p className="text-sm text-gray-500 mb-6">Enter your registered email or phone number and we will send you a reset code</p>
+       <h1 className="text-xl mb-4 font-bold text-white text-center">Reset your Password</h1> 
+      <p className="text-sm text-gray-400 mb-6 text-center">Enter your registered email or phone number and we will send you a reset code</p>
 
    
       <div className="flex -mx-4 border-b border-gray-200 mb-6">
@@ -34,8 +35,8 @@ const ForgotPassword=()=>{
           className={`
             cursor-pointer px-4 py-3 text-center text-sm transition-all duration-200 w-1/2
             ${isPhoneActive 
-              ? 'text-black-600 font-semibold border-b-2 border-black' 
-              : 'text-gray-500 hover:text-gray-700' 
+              ? 'text-[#F0BE1F] font-semibold border-b-[3px] border-[#F0BE1F]' 
+              : 'text-gray-400 hover:text-gray-700' 
             }
           `}
         >
@@ -48,8 +49,8 @@ const ForgotPassword=()=>{
           className={`
             cursor-pointer px-4 py-3 text-center text-sm transition-all duration-200 w-1/2
             ${!isPhoneActive 
-              ? 'text-black-600 font-semibold border-b-2 border-black' 
-              : 'text-gray-500 hover:text-gray-700' 
+              ? 'text-[#F0BE1F] font-semibold border-b-[3px] border-[#F0BE1F]' 
+              : 'text-gray-400 hover:text-gray-700' 
             }
           `}
         >
@@ -58,7 +59,7 @@ const ForgotPassword=()=>{
       </div>
 
       
-      <div className="w-full bg-gray-50 border border-gray-300 rounded-lg overflow-hidden transition-all duration-300">
+      <div className="w-full bg-[#110070] border border-gray-300 rounded-lg overflow-hidden transition-all duration-300 text-white">
         
         {isPhoneActive ? (
           
@@ -85,13 +86,15 @@ const ForgotPassword=()=>{
           />
         )}
       </div>
+      <p className="text-gray-400 text-sm text-center mt-2">Enter your registered email or phone number and we will send you a reset code</p>
 
 
-      <button className="w-full mt-[300px] py-3 bg-gray-300 text-black font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors">
+      <button className="w-full mt-[130px] py-3 bg-[#F0BE1F] text-black font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors">
           Continue
       </button>
-      <p className="text-gray-400 text-sm text-center mt-2">Enter your registered email or phone number and we will send you a reset code</p>
+      
       </div>
+    </div>
 
     );
 };

@@ -31,10 +31,14 @@ function App() {
     
     <div >
       <AccountInputToggle/>
-      <Verification/>
+      <LoginScreen/>
       <CreatePassword/>
-      <TermsConditions/>
-      <YourIn/>
+      <WelcomBack/>
+      <ForgotPassword/>
+      <ResetPassword/>
+      <PasswordResetSuccess/>
+
+
       
      
      
