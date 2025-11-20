@@ -25,3 +25,13 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
 .verygood { background-color: #4ade80; }  /* green-400 */
 .strong { background-color: #16a34a; }    /* green-600 */
 
+.hide-scrollbar::-webkit-scrollbar{
+ 
+  width: 0px;
+  background: transparent;
+}
+
+.hide-scrollbar{
+  -ms-overflow-style:none;
+  scrollbar-width: none;
+}
