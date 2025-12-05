@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import HeaderPassword from '../components/headerPassword';
 import SkipButton from "../components/PreviousButton";
+import { Link } from "react-router-dom";
 
 const ForgotPassword = () => {
   const [isPhoneActive, setIsPhoneActive] = useState(true);
@@ -33,7 +34,9 @@ const ForgotPassword = () => {
       <div className="mx-auto w-full max-w-md p-6 bg-[#110070] shadow-2xl rounded-2xl my-[50px] border-[1px] border-[#2000D4] h-[580px]">
 
         <div className="flex items-center space-x-2 mb-6">
+          <Link to='/login'>
           <SkipButton />
+          </Link>
         </div>
 
         <h1 className="text-xl mb-4 font-bold text-white text-center">Reset your Password</h1>
@@ -60,7 +63,7 @@ const ForgotPassword = () => {
             className={`
               cursor-pointer px-4 py-3 text-center text-sm transition-all duration-200 w-1/2
               ${!isPhoneActive
-                ? 'text-[#F0BE1F] font-semibold border-b-[3px] border-[#F0BE1F]'
+                ? 'text-[#F0BE1F] font-semibold  border-b-[3px] border-[#F0BE1F]'
                 : 'text-gray-400 hover:text-gray-700'
               }
             `}
@@ -69,7 +72,7 @@ const ForgotPassword = () => {
           </div>
         </div>
 
-        <div className="w-full bg-[#110070]    overflow-hidden transition-all duration-300 text-white">
+        <div className="w-full bg-[#110070] overflow-hidden transition-all duration-300 text-white">
 
           {isPhoneActive ? (
             <div className="flex items-center w-full">
@@ -90,7 +93,7 @@ const ForgotPassword = () => {
             <input
               type="email"
               placeholder="example@domain.com"
-              className="w-full p-3 text-sm bg-transparent focus:outline-none border-none"
+              className="w-full p-4 text-sm text-white focus:outline-none border border-gray-300 rounded-lg bg-[#110070]"
             />
           )}
         </div>

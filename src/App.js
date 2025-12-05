@@ -1,8 +1,6 @@
 // ./src/App.js
 import React from 'react';
-import Verification from './signup/Verification';
-import AboutScreen1 from './welcomeflow/AboutScreen';
-import Welcome from './welcomeflow/welcomeScreen';
+import Verification from './signup/Verification'
 import AccountInputToggle from './signup/AccountInputScreen';
 import CreatePassword from './signup/CreatePassword';
 import TermsConditions from './signup/Terms&conditions';
@@ -15,44 +13,26 @@ import WelcomBack from './Login/WelcomBack';
 import ForgotPassword from './Forgot password/ForgotPassword';
 import ResetPassword from './Forgot password/ResetPassword';
 import PasswordResetSuccess from './Forgot password/PasswordResetSuccess';
-import IntrotoKYC from './KYCFlow/intotoKYC';
-import SelectID from './KYCFlow/selectID';
-import ProgressStepper from './components/ProgressBar';
-import Step1 from './KYCFlow/step1';
-import Step2 from './KYCFlow/step2';
-import Step3 from './KYCFlow/step3';
-import CompletedKYC from './KYCFlow/completed';
+
 import HeaderSignup from './components/headerSignup';
+import { Routes, Route } from 'react-router-dom';
+
 
 
 function App() {
   return (
-   
-    
-    <div >
-      <AccountInputToggle/>
-      <LoginScreen/>
-      <CreatePassword/>
-      <WelcomBack/>
-      <ForgotPassword/>
-      <ResetPassword/>
-      <PasswordResetSuccess/>
+     
+   <Routes>
+     <Route path='/signup/create' element={<AccountInputToggle/>}/>
+     <Route path='/signup/verify' element={<Verification/>}/>
+     <Route path='/signup/secure' element={<CreatePassword/>}/>
+     <Route path='/signup/welcome' element={<YourIn/>}/>
+     <Route path='/login' element={<LoginScreen/>}/>
+     <Route path='/forgotpassword' element={<ForgotPassword/>}/>
+   </Routes>
 
 
       
-     
-     
- 
-     
-
-    
-     
-
-
-      
-      
-   
-    </div>
    
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import HeaderSignup from '../components/headerSignup';
 import SkipButton from '../components/PreviousButton';
+import { Link } from 'react-router-dom';
 
 const AccountInputToggle = () => {
   
@@ -36,6 +37,8 @@ const AccountInputToggle = () => {
     c.code.includes(searchTerm)
   );
 
+  console.log(showCountryOverlay)
+
   return (
     <div className='bg-[#110070] p-4'>
       <HeaderSignup />
@@ -43,7 +46,9 @@ const AccountInputToggle = () => {
       <div className="mx-auto w-full max-w-md h-[70vh] p-10 bg-[#110070] shadow-[0_0_60px_rgba(0,0,0,0.4)] border border-[#2000D4] rounded-2xl my-[50px]">
 
         <div className="flex items-center space-x-2 mb-6">
-          <SkipButton />
+          
+          <SkipButton to='' />
+          
         </div>
 
         <h1 className="text-xl mb-4 font-bold text-white text-center">Create your Goldenia Account</h1>
@@ -105,9 +110,13 @@ const AccountInputToggle = () => {
           )}
         </div>
 
+
+       <Link to='/signup/verify'>
         <button className="w-full mt-[80px] py-3 bg-[#F0BE1F] text-black font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors">
           Continue
         </button>
+        </Link>
+        
 
         <div className="flex items-center my-6">
           <div className="flex-grow border-t border-gray-300"></div>
@@ -178,10 +187,14 @@ const AccountInputToggle = () => {
               ) : (
                 <p className="text-center text-gray-400 py-2">No results</p>
               )}
+
+              
             </div>
           </div>
         </div>
+        
       )}
+      
 
     </div>
   );

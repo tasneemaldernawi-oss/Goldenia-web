@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from '../assets/Logo.png'
+import { Link } from "react-router-dom";
 
 
 const HeaderLogin=()=>{
@@ -12,7 +13,7 @@ const HeaderLogin=()=>{
 
             
         <div className="mt-8 text-center text-md">
-          Don't have an account? <a href="#" className="text-black bg-[#F0BE1F] ml-2  p-3 rounded font-semibold hover:underline">Create an Account</a>
+          Don't have an account? <Link to='/signup/create' className="text-black bg-[#F0BE1F] ml-2  p-3 rounded font-semibold hover:underline">Create an Account</Link>
       </div>
       
 

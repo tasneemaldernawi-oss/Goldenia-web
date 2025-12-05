@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import HeaderLogin from '../components/headerLogin';
 import SkipButton from "../components/PreviousButton";
+import { Link } from "react-router-dom";
 
 const LoginScreen = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -119,12 +120,15 @@ const LoginScreen = () => {
           ></i>
         </div>
 
-       
-        <p className="float-right mt-2 mb-5 mr-1 text-sm text-[#F0BE1F]"><strong>Forgot Password?</strong></p>
+       <Link to='/forgotpassword'>
+        <button className="float-right mt-2 mb-5 mr-1 text-sm text-[#F0BE1F] font-bold">Forgot Password?</button>
+        </Link>
 
+        <Link to='/signup/verify'>
         <button className="w-full mt-8 py-3 bg-[#F0BE1F] text-black font-semibold rounded-lg shadow-md hover:bg-gray-100">
           Continue
         </button>
+        </Link>
 
         <div className="flex items-center my-6">
           <div className="flex-grow border-t border-gray-300"></div>

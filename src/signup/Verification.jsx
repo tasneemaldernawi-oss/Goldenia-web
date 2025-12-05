@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import SkipButton from "../components/PreviousButton";
 import HeaderSignup from "../components/headerSignup";
+import { Link } from "react-router-dom";
 
 
 const Button = ({ label, disabled }) => (
@@ -62,10 +63,14 @@ const Verification = () => {
     return (
       <div className='bg-[#110070] p-4 pb-8'>  
       <HeaderSignup/>  
-        <div className="mx-auto w-full max-w-md p-6 bg-white shadow-2xl border-[1px] border-[#2000D4] rounded-2xl my-[50px] bg-[#110070] h-[542px] "> 
+        <div className="mx-auto w-full max-w-md p-6 bg-[#110070] shadow-2xl border-[1px] border-[#2000D4] rounded-2xl my-[50px] bg-[#110070] h-[542px] "> 
+           
             <div className="flex items-center space-x-2 mb-6">
+            <Link to='/signup/create'>
               <SkipButton/>
+            </Link>
             </div>
+            
 
             <h1 className="text-xl font-bold mb-2 text-white text-center">Verify your Identity</h1>
             <p className="text-sm text-gray-400 mb-8 text-center">Enter the 6-digit code sent to +234 *** 6789</p>
@@ -99,13 +104,15 @@ const Verification = () => {
                 </button>
             </p>
             
-            
+            <Link to='/signup/secure'>
             <div className="w-full mt-[180px] ">
                 <Button 
                     label="Verify" 
                     disabled={!isCodeComplete} 
                 />
             </div>
+            </Link>
+            
             
         </div>
         </div>

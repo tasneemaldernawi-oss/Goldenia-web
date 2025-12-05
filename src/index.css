@@ -35,3 +35,9 @@ input[type="password"]::-webkit-credentials-auto-fill-button {
   -ms-overflow-style:none;
   scrollbar-width: none;
 }
+@layer components {
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #110070 inset; /* sets background */
+    -webkit-text-fill-color: white; /* sets text color */
+  }
+}

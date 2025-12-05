@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "../components/Button";
 import SkipButton from "../components/PreviousButton";
 import HeaderSignup from "../components/headerSignup";
+import { Link } from "react-router-dom";
 
 const CreatePassword = () => {
   const [password, setPassword] = useState("");
@@ -31,7 +32,9 @@ const CreatePassword = () => {
       <HeaderSignup />
       <div className="mx-auto w-full max-w-md p-7 bg-[#110070] shadow-2xl rounded-2xl my-[50px] border-[1px] border-[#2000D4]">
         <div className="flex items-center space-x-2 mb-6">
+          <Link to='/signup/verify'>
           <SkipButton />
+          </Link>
         </div>
 
         <h1 className="text-xl mb-4 font-bold text-white text-center">Secure your account</h1>
@@ -126,6 +129,7 @@ const CreatePassword = () => {
           )}
         </div>
 
+        <Link to='/signup/welcome'>
         <button
           disabled={!passwordMatch || strength < 3}
           className={`w-full mt-[100px] py-3 rounded-lg shadow-md font-semibold transition-colors ${
@@ -136,6 +140,7 @@ const CreatePassword = () => {
         >
           Continue
         </button>
+        </Link>
       </div>
     </div>
   );
