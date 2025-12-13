@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 const HeaderLogin=()=>{
     return(
         <div>
-        <div className="flex flex-row  justify-between bg-[#110070] text-white p-2">
+        <div className="flex flex-row  justify-between bg-[#faf9f6] text-white p-2">
             <div>
-                <img src={Logo} alt="Logo" />
+                <img className="bg-[#464646] p-2 w-[90px] h-[90px] rounded-full" src={Logo} alt="Logo" />
             </div>
 
             
-        <div className="mt-8 text-center text-md">
-          Don't have an account? <Link to='/signup/create' className="text-black bg-[#F0BE1F] ml-2  p-3 rounded font-semibold hover:underline">Create an Account</Link>
+        <div className="mt-8 text-center text-md text-black">
+          Don't have an account? <Link to='/signup/create' className="text-white bg-[#2500F8] ml-2  p-3 rounded-xl font-semibold hover:underline">Create an Account</Link>
       </div>
       
 

@@ -40,7 +40,7 @@ const AccountInputToggle = () => {
   console.log(showCountryOverlay)
 
   return (
-    <div className='bg-[#110070] p-4'>
+    <div className='bg-[#faf9f6] p-4'>
       <HeaderSignup />
       
       <div className="mx-auto w-full max-w-md h-[70vh] p-10 bg-[#110070] shadow-[0_0_60px_rgba(0,0,0,0.4)] border border-[#2000D4] rounded-2xl my-[50px]">

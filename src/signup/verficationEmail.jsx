@@ -5,10 +5,10 @@ import HeaderSignup from "../components/headerSignup";
 
 const Button = ({ label, disabled }) => (
     <button 
-        className={`w-full py-3 font-semibold rounded-lg transition-colors ${
+        className={`w-full py-3 font-semibold rounded-full transition-colors ${
             disabled 
                 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' 
-                : 'bg-[#F0BE1F] text-black hover:bg-yellow-300'
+                : 'bg-[#2500F8] text-black hover:bg-yellow-300'
         }`}
         disabled={disabled}
     >
@@ -60,15 +60,15 @@ const VerificationEmail = () => {
 
 
     return (
-      <div className='bg-[#110070] p-4 pb-8'>  
+      <div className='bg-[#faf9f6] p-4 pb-8'>  
       <HeaderSignup/>  
-        <div className="mx-auto w-full max-w-md p-6 bg-white shadow-2xl border-[1px] border-[#2000D4] rounded-2xl my-[50px] bg-[#110070] h-[542px] "> 
+        <div className="mx-auto w-full max-w-md p-6 bg-white shadow-2xl border-[1px] border-[#2000D4] rounded-2xl my-[50px] bg-[#110070] h-[400px] "> 
             <div className="flex items-center space-x-2 mb-6">
               <SkipButton/>
             </div>
 
-            <h1 className="text-xl font-bold mb-2 text-white text-center">Verify your Identity</h1>
-            <p className="text-sm text-gray-400 mb-8 text-center">Enter the 6-digit code sent to ex***@domain.com</p>
+            <h1 className="text-xl font-bold mb-2 text-black text-center">Verify your Identity</h1>
+            <p className="text-sm text-gray-800 mb-8 text-center">Enter the 6-digit code sent to ex***@domain.com</p>
             
             
             <div className="flex justify-between space-x-2">
@@ -80,18 +80,18 @@ const VerificationEmail = () => {
                         maxLength="1" 
                         value={digit}
                         onChange={(e) => handleChange(e, index)}
-                        className="w-10 h-14 text-center text-xl font-medium rounded-lg border-2 border-gray-400 focus:border-white focus:ring-0 transition-colors bg-[#110070] caret-white text-white"
+                        className="w-10 h-14 text-center text-xl font-medium rounded-lg border-2 border-gray-400 focus:border-black focus:ring-0 transition-colors bg-[#fffff] caret-white text-black"
                         style={{ outline: 'none' }} 
                     />
                 ))}
             </div>
 
-            <p className="text-sm text-gray-300 mt-8 text-center">
+            <p className="text-sm text-black mt-8 text-center">
                 Didn't receive the code? 
                 <button 
                     onClick={() => { if (canResend) setSeconds(30); }}
                     className={`ml-1 font-medium transition-colors ${
-                        canResend ? 'text-[#F0BE1F] hover:text-blue-700' : 'text-gray-400 cursor-default'
+                        canResend ? 'text-gray-400' : ' text-blue-700 cursor-default'
                     }`}
                     disabled={!canResend}
                 >
@@ -100,7 +100,7 @@ const VerificationEmail = () => {
             </p>
             
             
-            <div className="w-full mt-[180px] ">
+            <div className="w-full mt-[40px] ">
                 <Button 
                     label="Verify" 
                     disabled={!isCodeComplete} 
