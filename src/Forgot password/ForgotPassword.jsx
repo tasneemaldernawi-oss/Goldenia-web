@@ -28,10 +28,10 @@ const ForgotPassword = () => {
   );
 
   return (
-    <div className='bg-[#110070] p-4'>
+    <div className='bg-[#faf9f6] p-4'>
       <HeaderPassword />
 
-      <div className="mx-auto w-full max-w-md p-6 bg-[#110070] shadow-2xl rounded-2xl my-[50px] border-[1px] border-[#2000D4] h-[580px]">
+      <div className="mx-auto w-full max-w-md p-6 bg-[#ffffff] shadow-2xl rounded-2xl my-[50px] border-[1px] border-[#2000D4] h-[580px]">
 
         <div className="flex items-center space-x-2 mb-6">
           <Link to='/login'>
@@ -39,7 +39,7 @@ const ForgotPassword = () => {
           </Link>
         </div>
 
-        <h1 className="text-xl mb-4 font-bold text-white text-center">Reset your Password</h1>
+        <h1 className="text-xl mb-4 font-bold text-black text-center">Reset your Password</h1>
         <p className="text-sm text-gray-400 mb-6 text-center">
           Enter your registered email or phone number and we will send you a reset code
         </p>
@@ -50,7 +50,7 @@ const ForgotPassword = () => {
             className={`
               cursor-pointer px-4 py-3 text-center text-sm transition-all duration-200 w-1/2
               ${isPhoneActive
-                ? 'text-[#F0BE1F] font-semibold border-b-[3px] border-[#F0BE1F]'
+                ? 'text-black font-bold border-b-[3px] border-black'
                 : 'text-gray-400 hover:text-gray-700'
               }
             `}
@@ -63,7 +63,7 @@ const ForgotPassword = () => {
             className={`
               cursor-pointer px-4 py-3 text-center text-sm transition-all duration-200 w-1/2
               ${!isPhoneActive
-                ? 'text-[#F0BE1F] font-semibold  border-b-[3px] border-[#F0BE1F]'
+                ? 'text-black font-bold  border-b-[3px] border-black'
                 : 'text-gray-400 hover:text-gray-700'
               }
             `}
@@ -72,13 +72,13 @@ const ForgotPassword = () => {
           </div>
         </div>
 
-        <div className="w-full bg-[#110070] overflow-hidden transition-all duration-300 text-white">
+        <div className="w-full bg-[#ffffff] overflow-hidden transition-all duration-300 text-black">
 
           {isPhoneActive ? (
             <div className="flex items-center w-full">
               <button
                 onClick={() => setShowCountryOverlay(true)}
-                className="p-4 bg-transparent text-sm border border-gray-300 rounded-lg text-white"
+                className="p-4 bg-transparent text-sm border border-gray-300 rounded-lg text-black"
               >
                 {countryCode} ▼
               </button>
@@ -93,7 +93,7 @@ const ForgotPassword = () => {
             <input
               type="email"
               placeholder="example@domain.com"
-              className="w-full p-4 text-sm text-white focus:outline-none border border-gray-300 rounded-lg bg-[#110070]"
+              className="w-full p-4 text-sm text-white focus:outline-none border border-gray-300 rounded-lg bg-[#fffff]"
             />
           )}
         </div>
@@ -102,7 +102,7 @@ const ForgotPassword = () => {
           Enter your registered email or phone number and we will send you a reset code
         </p>
 
-        <button className="w-full mt-[130px] py-3 bg-[#F0BE1F] text-black font-semibold rounded-lg shadow-md hover:bg-gray-100">
+        <button className="w-full mt-[130px] py-3 bg-[#2500F8] text-white font-semibold rounded-full shadow-md hover:bg-[#001BB7]">
           Continue
         </button>
 
@@ -116,8 +116,8 @@ const ForgotPassword = () => {
             className="absolute inset-0 bg-black opacity-25"
           />
 
-          <div className="relative bg-[#110070] p-6 w-80 rounded-xl shadow-xl">
-            <h2 className="text-white text-lg mb-4 text-center font-bold">
+          <div className="relative bg-[#ffffff] p-6 w-80 rounded-xl shadow-xl">
+            <h2 className="text-black text-lg mb-4 text-center font-bold">
               Choose your country code
             </h2>
 
@@ -125,7 +125,7 @@ const ForgotPassword = () => {
               <input
                 type="text"
                 placeholder="Search your country or code"
-                className="w-full p-2 pl-9 rounded-md bg-transparent border border-gray-500 text-white"
+                className="w-full p-2 pl-9 rounded-md bg-transparent border border-gray-500 text-black"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
               />
@@ -136,7 +136,7 @@ const ForgotPassword = () => {
                 width="20"
                 height="20"
                 viewBox="0 0 24 24"
-                stroke="#ffffff"
+                stroke="black"
                 fill="none"
               >
                 <path
@@ -156,7 +156,7 @@ const ForgotPassword = () => {
                       setCountryCode(c.code);
                       setShowCountryOverlay(false);
                     }}
-                    className="w-full text-left p-2 bg-[#09006A] text-white hover:bg-[#12008E] flex justify-between items-center"
+                    className="w-full text-left p-2 text-black hover:bg-[#faf9f6] flex justify-between items-center"
                   >
                     <span>{c.name}</span>
                     <span className="font-mono">{c.code}</span>

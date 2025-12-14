@@ -32,6 +32,7 @@ function App() {
      <Route path='/signup/termsandconditions' element={<TermsConditions/>}/>
      <Route path='/login' element={<LoginScreen/>}/>
      <Route path='/forgotpassword' element={<ForgotPassword/>}/>
+     <Route path='/resetpassword' element={<ResetPassword/>}/>
    </Routes>
 
 

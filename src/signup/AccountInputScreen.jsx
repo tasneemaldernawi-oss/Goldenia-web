@@ -43,7 +43,7 @@ const AccountInputToggle = () => {
     <div className='bg-[#faf9f6] p-4'>
       <HeaderSignup />
       
-      <div className="mx-auto w-full max-w-md h-[70vh] p-10 bg-[#110070] shadow-[0_0_60px_rgba(0,0,0,0.4)] border border-[#2000D4] rounded-2xl my-[50px]">
+      <div className="mx-auto w-full max-w-md h-[70vh] p-10 bg-[#ffffff] rounded-2xl border border-[#2000D4] rounded-2xl my-[50px]">
 
         <div className="flex items-center space-x-2 mb-6">
           
@@ -51,8 +51,8 @@ const AccountInputToggle = () => {
           
         </div>
 
-        <h1 className="text-xl mb-4 font-bold text-white text-center">Create your Goldenia Account</h1>
-        <p className="text-sm text-[#CACACA] mb-6 text-center">Start your journey into the BPC ecosystem</p>
+        <h1 className="text-xl mb-4 font-bold text-black text-center">Create your Goldenia Account</h1>
+        <p className="text-sm text-gray-400 mb-6 text-center">Start your journey into the BPC ecosystem</p>
 
         <div className="flex -mx-4 border-b border-gray-200 mb-6">
           <div
@@ -60,7 +60,7 @@ const AccountInputToggle = () => {
             className={`
               cursor-pointer px-4 py-3 text-center text-sm transition-all duration-200 w-1/2
               ${isPhoneActive
-                ? 'text-[#F0BE1F] font-semibold border-b-[3px] border-[#F0BE1F]'
+                ? 'text-black font-bold border-b-[3px] border-black'
                 : 'text-gray-400 hover:text-gray-700'
               }
             `}
@@ -73,7 +73,7 @@ const AccountInputToggle = () => {
             className={`
               cursor-pointer px-4 py-3 text-center text-sm transition-all duration-200 w-1/2
               ${!isPhoneActive
-                ? 'text-[#F0BE1F] font-semibold border-b-[3px] border-[#F0BE1F]'
+                ? 'text-black font-semibold border-b-[3px] border-black'
                 : 'text-gray-400 hover:text-gray-700'
               }
             `}
@@ -83,13 +83,13 @@ const AccountInputToggle = () => {
         </div>
 
 
-        <div className="w-full bg-[#0D0056]  overflow-hidden transition-all duration-300">
+        <div className="w-full bg-[#ffffff]  overflow-hidden transition-all duration-300">
           {isPhoneActive ? (
-            <div className="flex items-center w-full bg-[#110070]">
+            <div className="flex items-center w-full bg-[#ffffff]">
               
               <button
                 onClick={() => setShowCountryOverlay(true)}
-                className='p-4 bg-transparent text-sm border border-gray-300 text-white rounded-lg'
+                className='p-4 bg-transparent text-sm border border-gray-300 text-black rounded-lg'
                 aria-label="Choose country code"
               >
                 {countryCode} ▼
@@ -98,21 +98,22 @@ const AccountInputToggle = () => {
               <input
                 type="tel"
                 placeholder="123 456 7890"
-                className="flex-grow p-4 text-sm bg-transparent text-white focus:outline-none border border-gray-300 rounded-lg ml-2"
+                className="flex-grow p-4 text-sm bg-transparent text-black focus:outline-none border border-gray-300 rounded-lg ml-2"
               />
             </div>
           ) : (
             <input
               type="email"
               placeholder="example@domain.com"
-              className="w-full p-4 text-sm text-white focus:outline-none border border-gray-300 rounded-lg bg-[#110070]"
+              className="w-full p-4 text-sm text-white focus:outline-none border border-gray-300 rounded-lg bg-[#ffffff]"
             />
           )}
         </div>
 
 
        <Link to='/signup/verify'>
-        <button className="w-full mt-[80px] py-3 bg-[#F0BE1F] text-black font-semibold rounded-lg shadow-md hover:bg-gray-100 transition-colors">
+       {/*note the hover bg   */ }
+        <button className="w-full mt-[80px] py-3 bg-[#2500F8] text-white font-semibold rounded-full shadow-md hover:bg-[#001BB7] transition-colors">
           Continue
         </button>
         </Link>
@@ -124,10 +125,10 @@ const AccountInputToggle = () => {
           <div className="flex-grow border-t border-gray-300"></div>
         </div>
 
-        <button className="w-full mb-3 py-3 border border-gray-300 bg-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors">
+        <button className="w-full mb-3 py-3 border border-gray-300 bg-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition-colors">
           Google
         </button>
-        <button className="w-full py-3 border border-gray-300 bg-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors">
+        <button className="w-full py-3 border border-gray-300 bg-gray-300 text-gray-700 font-medium rounded-full hover:bg-gray-50 transition-colors">
           Apple
         </button>
       </div>
